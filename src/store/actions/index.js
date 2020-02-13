@@ -1,5 +1,10 @@
 export {
-  createBoard
+  createBoard,
+  selectLetter,
+  unselectLetter,
+  addToCurrentWord,
+  deleteFromCurrentWord,
+  clearBoard
 } from './board';
 
 export {

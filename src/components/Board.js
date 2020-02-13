@@ -4,12 +4,12 @@ const Board = (props) => {
   let board = null;
 
   if (props.board) {
-    board = props.board.map((row) => {
+    board = props.board.map((row, i) => {
       return (
-        <div className="board-row" key={row.join()}>
-          {row.map((word, index) => (
-            <div className="board-cell" key={`${row.join()}-${index}`} onClick={() => props.clicked(word)}>
-              <span>{word}</span>
+        <div className="board-row" key={i}>
+          {row.map((dice, j) => (
+            <div className={["board-cell", dice.selected? "selected": ""].join(" ")} key={`${i}-${j}`} onClick={() => props.clicked(i, j)}>
+              <span>{dice.letter}</span>
             </div>
           ))}
         </div>

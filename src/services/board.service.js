@@ -1,22 +1,33 @@
 export const generateBoard = () => {
-  const words = getWords();
+  const letters = getLetters();
 
   let board = [];
   let rows = [];
+  let rowCount = 0;
+  let columnCount = 0;
 
-  for (let i = 0; i < words.length; i++) {
-    rows.push(words[i]);
+  for (let i = 0; i < letters.length; i++) {
+    rows.push({
+      letter: letters[i],
+      selected: false,
+      row: rowCount,
+      column: columnCount++,
+    });
 
     if ((i + 1) % 4 === 0) {
       board.push(rows);
       rows = [];
+      rowCount++;
+      columnCount = 0;
     }
   }
+
+  console.log(board);
 
   return board;
 };
 
-const getWords = () => {
+const getLetters = () => {
   //Dice configuration for the English Boggle:
   const dices = [
     ['R', 'I', 'F', 'O', 'B', 'X'],
@@ -40,15 +51,15 @@ const getWords = () => {
   const result = [];
 
   for (let dice of dices) {
-    let word = dice[Math.floor(Math.random() * dice.length)];
-    result.push(word);
+    let letter = dice[Math.floor(Math.random() * dice.length)];
+    result.push(letter);
   }
 
-  const vowelsCount = result.filter((word) => ['A', 'E', 'I', 'O', 'U'].includes(word)).length;
-  const consonantsCount = result.filter((word) => !['A', 'E', 'I', 'O', 'U'].includes(word)).length;
+  const vowelsCount = result.filter((letter) => ['A', 'E', 'I', 'O', 'U'].includes(letter)).length;
+  const consonantsCount = result.filter((letter) => !['A', 'E', 'I', 'O', 'U'].includes(letter)).length;
 
   if (vowelsCount < 5 || consonantsCount < 5) {
-    return getWords();
+    return getLetters();
   }
 
   return result;

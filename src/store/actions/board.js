@@ -26,6 +26,47 @@ export const createBoardFail = (error) => {
   };
 };
 
+export const selectLetter = (row, column) => {
+  return {
+    type: actionTypes.SELECT_LETTER,
+    payload: {
+      row,
+      column
+    }
+  };
+};
+
+export const unselectLetter = (row, column) => {
+  return {
+    type: actionTypes.UNSELECT_LETTER,
+    payload: {
+      row,
+      column
+    }
+  };
+};
+
+export const addToCurrentWord = (letter) => {
+  return {
+    type: actionTypes.ADD_TO_CURRENT_WORD,
+    payload: {
+      letter
+    }
+  };
+};
+
+export const deleteFromCurrentWord = () => {
+  return {
+    type: actionTypes.DELETE_FROM_CURRENT_WORD
+  };
+};
+
+export const clearBoard = () => {
+  return {
+    type: actionTypes.CLEAR_BOARD
+  };
+};
+
 export const createBoard = (player) => {
   return (dispatch) => {
     dispatch(createBoardStart());
