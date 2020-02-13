@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Fragment, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import './App.scss';
+import Board from './components/Board';
+import * as actions from './store/actions';
+import { useSelector } from 'react-redux';
 function App() {
+  const dispatch = useDispatch();
+  const board = useSelector(state => state.boardReducer.board);
+  const [currentWord, setCurrentWord] = useState('');
+
+  useEffect(() => {
+    dispatch(actions.createBoard('Elder'));
+  }, [dispatch]);
+
+  const handleWordClick = (word) => {
+    setCurrentWord((prev) => prev + word);
+  };
+
+  console.log(currentWord);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <header>Boggle Game</header>
+      <main>
+        <article>
+          <Board board={board} clicked={handleWordClick}/>
+          <p>{currentWord}</p>
+        </article>
+      </main>
+      <footer>Elder Patten Ferreira</footer>
+    </Fragment>
   );
 }
 
