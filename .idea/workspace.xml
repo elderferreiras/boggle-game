@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c06cb38-0298-4567-9e59-a475c9ac1dfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/stylesheet/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/stylesheet/_game.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/stylesheet/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ControlPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameStatus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WordsPlayed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/Board.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/ControlPanel.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/GameStatus.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/WordsPlayed.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/__tests__/board.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/__tests__/word.service.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheet/_board.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheet/_board.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheet/_body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheet/_body.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheet/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheet/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/board.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/board.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/word.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/word.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/action.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/action.types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/words.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/words.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/words.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/App.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,10 +48,16 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/__tests__" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -81,6 +71,85 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Jest.&lt;WordsPlayed/&gt;.should generate all rows">
+    <configuration name="&lt;WordsPlayed/&gt; (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/services/__tests__/board.service.test.js" />
+      <test-names>
+        <test-name value="&lt;WordsPlayed/&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;WordsPlayed/&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests__/WordsPlayed.test.js" />
+      <test-names>
+        <test-name value="&lt;WordsPlayed/&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;WordsPlayed/&gt;.should generate a game row" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/services/__tests__/board.service.test.js" />
+      <test-names>
+        <test-name value="&lt;WordsPlayed/&gt;" />
+        <test-name value="should generate a game row" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;WordsPlayed/&gt;.should generate all rows" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/services/__tests__/board.service.test.js" />
+      <test-names>
+        <test-name value="&lt;WordsPlayed/&gt;" />
+        <test-name value="should generate all rows" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;WordsPlayed/&gt;.should load .words" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/services/__tests__/board.service.test.js" />
+      <test-names>
+        <test-name value="&lt;WordsPlayed/&gt;" />
+        <test-name value="should load .words" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.&lt;WordsPlayed/&gt;.should generate all rows" />
+        <item itemvalue="Jest.&lt;WordsPlayed/&gt;.should generate a game row" />
+        <item itemvalue="Jest.&lt;WordsPlayed/&gt; (1)" />
+        <item itemvalue="Jest.&lt;WordsPlayed/&gt;.should load .words" />
+        <item itemvalue="Jest.&lt;WordsPlayed/&gt;" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -93,7 +162,7 @@
       <updated>1581620194904</updated>
       <workItem from="1581620196217" duration="6680000" />
       <workItem from="1581641933446" duration="84000" />
-      <workItem from="1581642018329" duration="14814000" />
+      <workItem from="1581642018329" duration="17933000" />
     </task>
     <servers />
   </component>
