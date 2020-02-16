@@ -2,9 +2,13 @@ import * as actionTypes from '../actions/action.types';
 import { updateObject } from '../../utility';
 
 const initialState = {
-  board: [],
+  board: [
+    [{}, {}, {}, {}],
+    [{letter: 'L'}, {letter: 'E'}, {letter: 'T'}, {letter: 'S'}],
+    [{}, {letter: 'G'}, {letter: 'O'}, {}],
+    [{}, {}, {}, {}],
+  ],
   currentWord: '',
-  player: null,
   loading: false,
   error: false
 };
@@ -42,7 +46,6 @@ const createBoardStart = (state) => {
 const createBoardSuccess = (state, action) => {
   return updateObject(state, {
     board: action.payload.board,
-    player: action.payload.player,
     loading: false,
     error: false
   });

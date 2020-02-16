@@ -1,5 +1,6 @@
 export {
   createBoard,
+  createGameOverBoard,
   selectLetter,
   unselectLetter,
   addToCurrentWord,
@@ -8,5 +9,11 @@ export {
 } from './board';
 
 export {
-  createWord
+  createWord,
+  resetWords
 } from './words';
+
+export {
+  startPlaying,
+  stopPlaying
+} from './game';

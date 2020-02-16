@@ -2,14 +2,16 @@ import * as actionTypes from '../actions/action.types';
 import { updateObject } from '../../utility';
 
 const initialState = {
-  validWords: [],
-  invalidWords: [],
+  words: [],
+  points: 0,
   loading: false,
   error: false
 };
 
 const wordsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.RESET_WORDS:
+      return resetWords(state);
     case actionTypes.CREATE_WORD_START:
       return createWordStart(state);
     case actionTypes.CREATE_WORD_SUCCESS:
@@ -21,6 +23,15 @@ const wordsReducer = (state = initialState, action) => {
   }
 };
 
+const resetWords = () => {
+  return {
+    words: [],
+    points: 0,
+    loading: false,
+    error: false
+  };
+};
+
 const createWordStart = (state) => {
   return updateObject(state, {
     loading: true,
@@ -29,19 +40,46 @@ const createWordStart = (state) => {
 };
 
 const createWordSuccess = (state, action) => {
+  const words = [...state.words];
+  const newWord = {word: action.payload.word, valid: action.payload.valid, points: 0};
+
+  let points = state.points;
+
+  if (action.payload.valid) {
+    const wordPoints = getPoints(action.payload.word);
+    points += wordPoints;
+    newWord.points = wordPoints;
+  }
+
+  words.unshift(newWord);
+
   return updateObject(state, {
-    validWords: state.validWords.concat(action.payload.validWords),
-    invalidWords: state.invalidWords.concat(action.payload.invalidWords),
+    words,
+    points: points,
     loading: false,
     error: false
   });
 };
 
 const createWordFail = (state, action) => {
-  return updateObject(state,{
+  return updateObject(state, {
     loading: false,
     error: action.payload.error
   });
+};
+
+const getPoints = (word) => {
+  if (word.length < 5) {
+    return 1;
+  } else if (word.length === 5) {
+    return 2;
+  } else if (word.length === 6) {
+    return 3;
+  } else if (word.length === 7) {
+    return 5;
+  } else if (word.length > 7) {
+    return 11;
+  }
 };
 
 export default wordsReducer;

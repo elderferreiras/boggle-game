@@ -4,15 +4,17 @@
 
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #fffbef;
 }
 
 main {
   display: flex;
-  min-height: calc(100vh - 40vh);
+  min-height: calc(100vh - 13vh);
 }
 
 main > article {
-  flex: 1;
+  margin: 40px auto;
 }
 
 main > nav {
@@ -23,7 +25,4 @@ header, footer, article, nav, aside {
   padding: 1em;
 }
 
-header, footer {
-  background: yellowgreen;
-  height: 20vh;
-}
+

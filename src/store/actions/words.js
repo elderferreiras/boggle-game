@@ -7,12 +7,18 @@ export const createWordStart = () => {
   };
 };
 
-export const createWordSuccess = ({validWords = [], invalidWords = []}) => {
+export const resetWords = () => {
+  return {
+    type: actionTypes.RESET_WORDS
+  };
+};
+
+export const createWordSuccess = ({word, valid}) => {
   return {
     type: actionTypes.CREATE_WORD_SUCCESS,
     payload: {
-      validWords,
-      invalidWords
+      word,
+      valid
     }
   };
 };
@@ -33,13 +39,15 @@ export const createWord = (word) => {
     try {
       const isValid = await API.isValidWord(word);
 
-      if (isValid) {
-        dispatch(createWordSuccess({validWords: [word]}));
-      } else {
-        dispatch(createWordSuccess({invalidWords: [word]}));
-      }
+      dispatch(createWordSuccess({word, valid: isValid}));
     } catch (error) {
       dispatch(createWordFail(error))
     }
+  }
+};
+
+export const clearWords = () => {
+  return (dispatch) => {
+    dispatch(resetWords())
   }
 };

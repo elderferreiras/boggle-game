@@ -1,0 +1,110 @@
+.game {
+  max-width: 500px;
+
+  .game-start-button {
+    cursor: pointer;
+    color: #68635e;
+    font-size: 18px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 40px;
+    padding: 5px;
+    background: #ffffff;
+    font-weight: bold;
+    border: 1px solid #68635e;
+  }
+
+  .current-word {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      color: #68635e;
+      margin: auto;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+
+    .game-buttons {
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        cursor: pointer;
+        outline: 0;
+        border: none;
+        vertical-align: baseline;
+        color: black;
+        padding: 10px;
+        background-color: #a3e7e6;
+        border-radius: 10px;
+
+        &.submit-word {
+          color: green;
+          background-color: #90ee90;
+        }
+
+        &.clear-word {
+          color: white;
+          background-color: #ff6961;
+        }
+      }
+    }
+
+    @media all and (max-width: 812px) {
+      margin: 0 10vw;
+    }
+  }
+
+  .words {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      width: 256px;
+      list-style: none;
+      padding: 0;
+      height: 200px;
+      overflow: hidden;
+      overflow-y: auto;
+
+      li {
+        margin: 5px 0;
+        background: white;
+        border-radius: 20px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        &.valid {
+          background: #b5ffb5;
+        }
+
+        &.invalid {
+          background: #ffe6e6;
+          color: grey;
+        }
+
+        &.word-points {
+          text-align: right;
+        }
+
+        &.word-content {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .game-timer {
+    text-align: center;
+  }
+
+  .game-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+

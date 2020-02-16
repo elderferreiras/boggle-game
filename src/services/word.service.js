@@ -3,7 +3,7 @@ import axios from 'axios';
 export const isValidWord = async (word) => {
   try {
     const response = await axios.post("https://us-central1-hazel-analytics.cloudfunctions.net/boggle-dictionary", {
-      word: word
+      word: word.toLowerCase()
     });
 
     if (response.data && response.data.valid) {

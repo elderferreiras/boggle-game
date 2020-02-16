@@ -7,12 +7,11 @@ export const createBoardStart = () => {
   };
 };
 
-export const createBoardSuccess = ({board, player}) => {
+export const createBoardSuccess = ({board}) => {
   return {
     type: actionTypes.CREATE_BOARD_SUCCESS,
     payload: {
-      board,
-      player
+      board
     }
   };
 };
@@ -67,13 +66,31 @@ export const clearBoard = () => {
   };
 };
 
-export const createBoard = (player) => {
+export const createBoard = () => {
   return (dispatch) => {
     dispatch(createBoardStart());
 
     try {
       const board = API.generateBoard();
-      dispatch(createBoardSuccess({board, player}));
+      dispatch(createBoardSuccess({board}));
+    } catch (error) {
+      dispatch(createBoardFail(error))
+    }
+  }
+};
+export const createGameOverBoard = () => {
+  return (dispatch) => {
+    dispatch(createBoardStart());
+
+    try {
+      const board = [
+        [{}, {}, {}, {}],
+        [{letter: 'G'}, {letter: 'A'}, {letter: 'M'}, {letter: 'E'}],
+        [{letter: 'O'}, {letter: 'V'}, {letter: 'E'}, {letter: 'R'}],
+        [{}, {}, {}, {}],
+      ];
+
+      dispatch(createBoardSuccess({board}));
     } catch (error) {
       dispatch(createBoardFail(error))
     }

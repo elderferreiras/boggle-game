@@ -22,8 +22,6 @@ export const generateBoard = () => {
     }
   }
 
-  console.log(board);
-
   return board;
 };
 
